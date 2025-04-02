@@ -1,7 +1,7 @@
 $(function () {
   gsap.registerPlugin(ScrollTrigger);
 
-  // 01 pf-visual
+  // 01 pf-visual (하나의 timeline으로 통합)
   gsap
     .timeline({
       scrollTrigger: {
@@ -15,36 +15,13 @@ $(function () {
     })
     .to('.pf-visual h1', { opacity: 1, ease: 'none', duration: 10 }, 5)
     .to(
-      '.pf-visual video',
+      '.pf-visual video, .pf-visual img', // video와 img를 동시에 처리
       { scale: 0.4, ease: 'none', duration: 10, opacity: 0.3 },
       5
     );
-});
 
-$(function () {
-  gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: '.visual',
-        start: 'top top',
-        end: 'bottom top',
-        scrub: 1,
-        pin: true,
-        // markers: true,
-      },
-    })
-    .to('.visual h1', { opacity: '1', ease: 'none', duration: '10' }, 5)
-    .to(
-      '.visual img',
-      { scale: '0.4', ease: 'none', duration: '10', opacity: '0.3' },
-      5
-    );
-});
-
-// imgBox
-$(function () {
+  // imgBox 애니메이션
   gsap.utils.toArray('.imgBox').forEach(function (imgBox) {
-    // toArray()=> 인스턴스를 배열로 만드는 메소드, forEach 배열을 반복문으로
     gsap.timeline({
       scrollTrigger: {
         trigger: imgBox,
@@ -56,7 +33,7 @@ $(function () {
     });
   });
 
-  // textBox
+  // textBox 애니메이션
   gsap.utils.toArray('.textBox').forEach(function (textBox) {
     gsap.timeline({
       scrollTrigger: {

@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* reset */
-* {margin: 0;padding: 0; outline: 1px solid red;}
+* {margin: 0;padding: 0;}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
 a {color: inherit; text-decoration: inherit;}
 li {list-style: none;}
@@ -189,7 +189,7 @@ svg 모션
 .concept ul.size li:nth-child(2) {width: 40%; margin-top: -50px;} 
 .concept ul.size li:nth-child(3) {width: 65%; margin-left: 10%;} 
 .concept .textBox {position: relative; padding-top: 10%;}
-.concept .textBox .title {font-size: 8vw; -webkit-text-stroke: #b1dd40 2px; color: transparent; position: absolute; left: 10%; top: -30%;}
+.concept .textBox .title {font-size: 8vw; -webkit-text-stroke: #b1dd40 2px; color: #fff; position: absolute; left: 10%; top: -30%;}
 .concept .textBox span {line-height: 1.6; color: #fff; display: block; font-size: 1.5vw;}
 .concept .textBox.size .title {font-size: 4.5vw; line-height: 1; left: 0;}
 .concept .textBox.size .title b {font-weight: 400; color: #fff; -webkit-text-stroke: 0; display: block;}
