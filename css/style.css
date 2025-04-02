@@ -167,7 +167,7 @@ svg 모션
 
 .infoProject .inner, .concept .inner {width: 80%; margin: 0 auto;}
 
-.infoProject {padding: 50px 0}
+.infoProject {padding: 50px 0; border: 3px solid red;}
 .infoProject .inner {display: flex; justify-content: space-between; flex-wrap: wrap;} 
 .infoProject .inner .imgBox {width: 70%;}
 .infoProject .inner .imgBox img {width: 100%;}
@@ -188,8 +188,8 @@ svg 모션
 .concept ul.size li:nth-child(1) {width: 32%; margin-left: 20%;}
 .concept ul.size li:nth-child(2) {width: 40%; margin-top: -50px;} 
 .concept ul.size li:nth-child(3) {width: 65%; margin-left: 10%;} 
-.concept .textBox {position: relative; padding-top: 10%;}
-.concept .textBox .title {font-size: 8vw; -webkit-text-stroke: #b1dd40 2px; color: #fff; position: absolute; left: 10%; top: -30%;}
+.concept .textBox {position: relative; padding-top: 10%; border: 1px solid red;}
+.concept .textBox .title {font-size: 8vw; -webkit-text-stroke: #b1dd40 2px; color: #fff; position: absolute; left: 0%; top: -25%;}
 .concept .textBox span {line-height: 1.6; color: #fff; display: block; font-size: 1.5vw;}
 .concept .textBox.size .title {font-size: 4.5vw; line-height: 1; left: 0;}
 .concept .textBox.size .title b {font-weight: 400; color: #fff; -webkit-text-stroke: 0; display: block;}
