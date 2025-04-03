@@ -98,7 +98,7 @@ svg 모션
 
 /* simplyScroll */
 .simply-scroll .simply-scroll-clip {overflow: hidden;}
-.simply-scroll .simply-scroll-clip .simply-scroll-list li{float: left;}
+.simply-scroll .simply-scroll-clip .simply-scroll-list li {float: left; width: 250px;}
 
 /* intro */
 
@@ -167,7 +167,7 @@ svg 모션
 
 .infoProject .inner, .concept .inner {width: 80%; margin: 0 auto;}
 
-.infoProject {padding: 50px 0; border: 3px solid red;}
+.infoProject {padding: 50px 0;}
 .infoProject .inner {display: flex; justify-content: space-between; flex-wrap: wrap;} 
 .infoProject .inner .imgBox {width: 70%;}
 .infoProject .inner .imgBox img {width: 100%;}
@@ -188,14 +188,13 @@ svg 모션
 .concept ul.size li:nth-child(1) {width: 32%; margin-left: 20%;}
 .concept ul.size li:nth-child(2) {width: 40%; margin-top: -50px;} 
 .concept ul.size li:nth-child(3) {width: 65%; margin-left: 10%;} 
-.concept .textBox {position: relative; padding-top: 10%; border: 1px solid red;}
-.concept .textBox .title {font-size: 8vw; -webkit-text-stroke: #b1dd40 2px; color: #fff; position: absolute; left: 0%; top: -25%;}
+.concept .textBox {position: relative; padding-top: 10%;}
+.concept .textBox .title {font-size: 6vw; -webkit-text-stroke: #b1dd40 2px; color: #fff; position: absolute; left: 0%; top: -15%;}
 .concept .textBox span {line-height: 1.6; color: #fff; display: block; font-size: 1.5vw;}
-.concept .textBox.size .title {font-size: 4.5vw; line-height: 1; left: 0;}
-.concept .textBox.size .title b {font-weight: 400; color: #fff; -webkit-text-stroke: 0; display: block;}
+
 
 /* imgBox에 active 클래스가 붙을 때 */
-.imgBox {position: relative; overflow: hidden; transition: all 0.4s;}
+.imgBox {position: relative; overflow: hidden; transition: all 0.4s; height: 80vh;}
 /* 설계구조 맨위 after 중간 before 맨아래 이미지 */
 .imgBox::before {content: ''; width:100%; height: 100%; background: rgba(28, 43, 60,0.7); position: absolute; left: 0; top: 0; transition: all 0.8s; transition-delay: 0s; z-index: 2;}
 .imBox::after {content: ''; width: 100%; height: 100%; background: #111606; position: absolute; left: 0; top: 0; transition: all 0.8s; z-index: 3;}
@@ -209,9 +208,11 @@ svg 모션
 /* container 호버시 이미지 스크롤 */
 .scroll-container { width: 100%; display: flex; flex-direction: column; position: absolute; top: 0;}
 .scroll-container.soop {transition: transform 1s linear;}
+.scroll-container.nike {transition: transform 5s linear;}
+.scroll-container.hygi {transition: transform 4s linear;}
 
 
-.ic-box{display:flex;border:1px solid red;padding:10px 0;}
+.ic-box{display:flex;}
 .ic-box span:nth-child(1){margin-right:10px;}
 
 .github-ic-white,

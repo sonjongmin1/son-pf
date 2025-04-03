@@ -25,7 +25,7 @@ $(function () {
     gsap.timeline({
       scrollTrigger: {
         trigger: imgBox,
-        start: '50% 100%',
+        start: '0% 100%',
         toggleClass: { targets: imgBox, className: 'active' },
         scrub: 1,
         // markers: true,
@@ -38,11 +38,11 @@ $(function () {
     gsap.timeline({
       scrollTrigger: {
         trigger: textBox,
-        start: '50% 80%',
+        start: '40% 80%',
         end: '100% 0%',
         toggleClass: { targets: textBox, className: 'active' },
         scrub: 1,
-        // markers: true,
+        markers: true,
       },
     });
   });
