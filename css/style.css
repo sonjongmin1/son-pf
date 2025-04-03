@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* reset */
-* {margin: 0;padding: 0;}
+* {margin: 0;padding: 0; outline: 3px solid red;}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
 a {color: inherit; text-decoration: inherit;}
 li {list-style: none;}
@@ -233,5 +233,28 @@ svg 모션
 .new-ic:hover .tooltip-text{visibility:visible;opacity:1;}
 
 
+.gallery {margin: 0 auto; position: relative; overflow: hidden; background-color: #fed700;}
 
+.sd-pf1, .sd-pf2 {height: 100vh; display: flex; justify-content: center; align-items: center; background-color: #0f0d0d; color: #fbe094; text-align: center; text-transform: uppercase;}
+.sd-pf1 .cd-logo {width: 150px; margin: 0 auto 25px;}
+.sd-pf1 .logo a {display: block; width: 100%; height: 100%;}
+.sd-pf1 .logo img {width: 100%;}
+.sd-pf1 .textBox .title {font-size: 72px; font-weight: bolder; margin-bottom: 5px;}
+.sd-pf1 .textBox .txt {font-size: 18px;}
+.sd-pf2 {font-size: 80px;}
 
+/* side-portfolio gallery */
+.sd-portfolio {padding-top: 120px;}
+.sd-portfolio .sd-textBox {width: 1400px; margin: 0 auto; text-transform: uppercase; color: #0f0d0d;}
+.sd-portfolio .sd-text h2 {font-size: 72px; letter-spacing: -5px; margin-bottom: 5px;}
+.sd-portfolio .sd-textBox p {font-size: 18px;}
+.sd-portfolio .sd-list {display: flex; flex-wrap: nowrap; padding: 6% 0;}
+.sd-portfolio .sd-list li {width: 400px; height: 520px; padding: 0 30px; flex-shrink: 0 !important;}
+.sd-portfolio .sd-list li .sd-box {width: 100%; height: 100%; overflow: hidden; position: relative;}
+.sd-portfolio .sd-list li .sd-box::after {content: ''; width: 100%; height: 100%; position: absolute; background: url('../images/icon/github.png') no-repeat center / 130px; left: 50%; top: 0; transform: translateX(-50%); opacity: 0; transition: 0.5s;}
+.sd-portfolio .sd-list li .sd-box img {width: 100%;}
+.sd-portfolio .sd-list li .sd-box:hover img {transform: scale(0.98); filter: brightness(60%);}
+.sd-portfolio .sd-list li .sd-box:hover:after {opacity: 0.5;}
+.sd-portfolio .sd-list li.sd-a {transform: rotate(-15deg);}
+.sd-portfolio .sd-list li.sd-b {transform: rotate(-10deg);}
+.sd-portfolio .sd-list li.sd-c {transform: rotate(8deg);}
