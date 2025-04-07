@@ -15,7 +15,7 @@ $(function () {
       scrub: 1,
       start: 'center center',
       end: '200%',
-      markers: true,
+      // markers: true,
     },
   });
 });

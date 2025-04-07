@@ -27,7 +27,7 @@ $(function () {
 // scrolla.js
 $(function () {
   $('.animate').scrolla({
-    moblie: true,
+    mobile: true,
     once: false,
   });
 });

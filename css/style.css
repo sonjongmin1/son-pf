@@ -1,9 +1,9 @@
-@charset "utf-8";
+ㅠ@charset "utf-8";
 /* 구글 폰트 */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* reset */
-* {margin: 0;padding: 0; outline: 3px solid red;}
+* {margin: 0;padding: 0;}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
 a {color: inherit; text-decoration: inherit;}
 li {list-style: none;}
@@ -21,7 +21,7 @@ img {vertical-align: middle;}
 .bt {margin-bottom: 10px;}
 /* layout */
 body {font-family: "Noto Sans", sans-serif; font-size: 16px; line-height: 1.6; box-sizing: border-box; overflow-x: hidden;}
-.wrap {position: relative; margin: 0 auto; overflow: hidden; color: rgb(28, 43, 60);  margin-bottom: 3000px;}
+.wrap {position: relative; margin: 0 auto; overflow: hidden; color: rgb(28, 43, 60);}
 /* section {border: 3px solid red;} */
 
 /* header */
@@ -42,7 +42,7 @@ header .menuOpen {display: none; transition: 0.3s;}
 .gnb ul li a:hover .char:after {transform: translateY(-100%); opacity: 0;}
 
 /* visual, circle */
-.visual .circle {position: absolute; bottom: 0; right: 60px; width: 300px; height: 300px;  border-radius: 100%; background: url('../images/profile/ghibli-profile.jpeg') no-repeat center; background-size: cover;}
+.visual .circle {position: absolute; bottom: 0; right: 60px; width: 300px; height: 300px;  border-radius: 100%; background: url('../images/profile/profile.jpeg') no-repeat center; background-size: cover; background-position: 0 10%;}
 .visual .circle .signBox{width: 100%; height: 100%; position: relative;}
 
 .visual {width: 100%; padding-top: 125px; box-sizing: border-box; position: relative; letter-spacing: -1px; color: #1c2b3c;}
@@ -169,7 +169,7 @@ svg 모션
 
 .infoProject {padding: 50px 0;}
 .infoProject .inner {display: flex; justify-content: space-between; flex-wrap: wrap;} 
-.infoProject .inner .imgBox {width: 70%;}
+.infoProject .inner .imgBox {width: 70%; border-radius: 10px;}
 .infoProject .inner .imgBox img {width: 100%;}
 
 .infoProject .inner .textBox {width: 25%;}
@@ -194,7 +194,7 @@ svg 모션
 
 
 /* imgBox에 active 클래스가 붙을 때 */
-.imgBox {position: relative; overflow: hidden; transition: all 0.4s; height: 80vh;}
+.imgBox {position: relative; overflow: hidden; transition: all 0.4s; border-radius: 10px;}
 /* 설계구조 맨위 after 중간 before 맨아래 이미지 */
 .imgBox::before {content: ''; width:100%; height: 100%; background: rgba(28, 43, 60,0.7); position: absolute; left: 0; top: 0; transition: all 0.8s; transition-delay: 0s; z-index: 2;}
 .imBox::after {content: ''; width: 100%; height: 100%; background: #111606; position: absolute; left: 0; top: 0; transition: all 0.8s; z-index: 3;}
@@ -233,7 +233,7 @@ svg 모션
 .new-ic:hover .tooltip-text{visibility:visible;opacity:1;}
 
 
-.gallery {margin: 0 auto; position: relative; overflow: hidden; background-color: #fed700;}
+.gallery {margin: 0 auto; position: relative; overflow: hidden; }
 
 .sd-pf1, .sd-pf2 {height: 100vh; display: flex; justify-content: center; align-items: center; background-color: #0f0d0d; color: #fbe094; text-align: center; text-transform: uppercase;}
 .sd-pf1 .cd-logo {width: 150px; margin: 0 auto 25px;}
@@ -243,18 +243,44 @@ svg 모션
 .sd-pf1 .textBox .txt {font-size: 18px;}
 .sd-pf2 {font-size: 80px;}
 
-/* side-portfolio gallery */
-.sd-portfolio {padding-top: 120px;}
-.sd-portfolio .sd-textBox {width: 1400px; margin: 0 auto; text-transform: uppercase; color: #0f0d0d;}
-.sd-portfolio .sd-text h2 {font-size: 72px; letter-spacing: -5px; margin-bottom: 5px;}
-.sd-portfolio .sd-textBox p {font-size: 18px;}
-.sd-portfolio .sd-list {display: flex; flex-wrap: nowrap; padding: 6% 0;}
-.sd-portfolio .sd-list li {width: 400px; height: 520px; padding: 0 30px; flex-shrink: 0 !important;}
-.sd-portfolio .sd-list li .sd-box {width: 100%; height: 100%; overflow: hidden; position: relative;}
-.sd-portfolio .sd-list li .sd-box::after {content: ''; width: 100%; height: 100%; position: absolute; background: url('../images/icon/github.png') no-repeat center / 130px; left: 50%; top: 0; transform: translateX(-50%); opacity: 0; transition: 0.5s;}
-.sd-portfolio .sd-list li .sd-box img {width: 100%;}
-.sd-portfolio .sd-list li .sd-box:hover img {transform: scale(0.98); filter: brightness(60%);}
-.sd-portfolio .sd-list li .sd-box:hover:after {opacity: 0.5;}
-.sd-portfolio .sd-list li.sd-a {transform: rotate(-15deg);}
-.sd-portfolio .sd-list li.sd-b {transform: rotate(-10deg);}
-.sd-portfolio .sd-list li.sd-c {transform: rotate(8deg);}
+/* side-portfolio */
+.sd-pf-st { /* height: 100vh; */ background-color: #fff;color: #1c2b3c;}
+.sd-pf-st .title {width: 100%; font-size: 170px; line-height: 1.1; text-align: center; padding-top: 30vh; box-sizing: border-box;}
+.sd-pf-st .title {font-size: 220px;}
+.sd-pf-st .workList {display: flex; justify-content: space-between; flex-wrap: wrap; width: 70%; margin: 0 auto;}
+.sd-pf-st .workList li {width: 45%; margin-top: 200px;}
+.sd-pf-st .workList li:nth-child(2n) {margin-top: 0;}
+.sd-pf-st .workList li a {display: block;}
+.sd-pf-st .workList li a .imgBox img {position: relative; width: 100%; z-index: 1000;}
+.sd-pf-st .workList li a .textBox h3 {font-size: 35px; font-weight: normal; margin: 20px 0 5px; text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.75);}
+.sd-pf-st .workList li a .textBox .info {display: flex; justify-content: space-between; color: #fff; text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.75);}
+
+/* team-project */
+.team-con01, .team-con03 {width: 100%; height: 100vh; background: #1f1f1f; color: #ece0c7; display: flex; justify-content: center; align-items: center; border: 3px solid red;}
+.team-con01 .team-textBox, .text-con03, .team-textBox {text-align: center;}
+.team-con01 .team-textBox, .team-log {width: 150px; margin: 0 auto 25px;}
+.team-con01 .team-textBox, .team-log img {width: 100%;}
+.team-con01 .team-textBox, .team-title {font-size: 68px; margin-bottom: 10px; font-weight: bolder; letter-spacing: -1px; color: #f45b40;}
+.team-con01 .team-textBox .team-txt {letter-spacing: -1px; font-size: 18px;}
+
+/* team-gallery */
+.team-gallery {width: 100%; background: #f86634; padding: 250px 0;}
+.team-gallery .team-inner {width: 70%; height: 600px; background: green; margin: 0 auto; display: flex; justify-content: space-between;}
+.team-gallery .team-inner .team-textBox {width: 45%; border: 1px solid blue; align-content: center;}
+.team-gallery .team-inner .team-imgBox {width: 50%; position: relative;}
+.team-gallery .team-inner .team-imgBox li {position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 550px; height: 450px; opacity: 1;}
+.team-gallery .team-inner .team-imgBox li.team-img1 {transform: translateY(-50%) rotate(0deg); z-index: 1;}
+.team-gallery .team-inner .team-imgBox li.team-img2 {transform: translateY(-50%) rotate(-5deg); z-index: 2;}
+.team-gallery .team-inner .team-imgBox li.team-img3 {transform: translateY(-50%) rotate(7deg); z-index: 3;}
+.team-gallery .team-inner .team-imgBox li.team-img4 {transform: translateY(-50%) rotate(-7deg); z-index: 4;}
+.team-gallery .team-inner .team-imgBox li.team-img5 {transform: translateY(-50%) rotate(2deg); z-index: 5;}
+.team-gallery .team-inner .team-imgBox li.team-img6 {transform: translateY(-50%) rotate(-3deg); z-index: 6;}
+.team-gallery .team-inner .team-imgBox li.team-img7 {transform: translateY(-50%) rotate(5deg); z-index: 7;}
+.team-gallery .team-inner .team-imgBox li.team-img8 {transform: translateY(-50%) rotate(-5deg); z-index: 8;}
+.team-gallery .team-inner .team-imgBox li.team-img9 {transform: translateY(-50%) rotate(7deg); z-index: 9;}
+.team-gallery .team-inner .team-imgBox li.team-img10 {transform: translateY(-50%) rotate(-7deg); z-index: 10;}
+.team-gallery .team-inner .team-imgBox li.team-img11 {transform: translateY(-50%) rotate(2deg); z-index: 11;}
+.team-gallery .team-inner .team-imgBox li.team-img12 {transform: translateY(-50%) rotate(0deg); z-index: 12;}
+.team-gallery .team-inner .team-imgBox li img {width: 100%; }
+
+.team-con03 h2 {font-size: 80px; text-transform: uppercase; color: #fff;}
