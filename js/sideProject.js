@@ -33,7 +33,7 @@ $(function () {
         start: '0% 100%',
         end: '0% 100%',
         scrub: 1,
-        markers: true,
+        // markers: true,
       },
     })
     .to(
