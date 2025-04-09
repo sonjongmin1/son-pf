@@ -33,13 +33,15 @@ $(function () {
 });
 
 $(function () {
-  $('.svgAni')
-    .find('#svgAni02')
+  $('.down-arrow')
+    .find('#arrow-02')
     .each(function (i, path) {
       let length = path.getTotalLength();
-      //   alert(length);
+      // alert(length);
     });
 });
 
 // svgAni1 : 4914
 // svgAni2 : 180
+// .arrow-01 : 950
+// .arrow-02 : 96

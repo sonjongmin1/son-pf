@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* reset */
-* {margin: 0;padding: 0;}
+* {margin: 0;padding: 0; box-sizing: border-box;}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
 a {color: inherit; text-decoration: inherit;}
 li {list-style: none;}
@@ -20,13 +20,13 @@ img {vertical-align: middle;}
 .bd {font-weight: bolder;} 
 .bt {margin-bottom: 10px;}
 /* layout */
-body {font-family: "Noto Sans", sans-serif; font-size: 16px; line-height: 1.6; box-sizing: border-box; overflow-x: hidden;}
+body {font-family: "Noto Sans", sans-serif; font-size: 16px; line-height: 1.6; box-sizing: border-box; overflow-x: hidden; }
 .wrap {position: relative; margin: 0 auto; overflow: hidden; color: rgb(28, 43, 60);}
 
 
 /* header */
 header {width: 100%; position: fixed; left: 0; top: 0; background: rgb(28, 43, 60); z-index: 100; padding: 30px 60px; box-sizing: border-box; display: flex; justify-content: space-between;}
-header.active {transform: translateY(-100%);}
+header.active {transform: translateY(-100%); }
 header .logo{color:#fff;}
 header .menuOpen {display: none; transition: 0.3s;}
 .gnb ul {display: flex; justify-content: space-between;}
@@ -49,7 +49,7 @@ header .menuOpen {display: none; transition: 0.3s;}
 .visual .mainText {font-size: 96px; font-weight: 400; line-height: 1.2; margin: 0px 0px 150px 60px; display: inline-block;}
 .visual .mainText p {overflow: hidden;}
 .visual .subText {margin-left: 20%;}
-.visual .svgAni {position: absolute; top: 23%; left: 10%; width: 40%; transform: rotate(-10deg);}
+/* .visual .svgAni {position: absolute; top: 23%; left: 10%; width: 40%; transform: rotate(-10deg);} */
 
 /* animation */
 .visual.motion .mainText {transform: translate3d(0,0,0) skewY(0deg); overflow:hidden;}
@@ -76,8 +76,8 @@ svg 모션
  - animation => 애니명 진행시간 진행속도 딜레이 진행방향순으로 작성 
  */
 
- .visual.motion #svgAni01 {stroke-dasharray: 4914; stroke-dashoffset: 4914; animation: ani1 2s linear 1s forwards;}
- .visual.motion #svgAni02 {stroke-dasharray: 180; stroke-dashoffset: 180; animation: ani2 0.5s linear 3.0s forwards;}
+ /* .visual.motion #svgAni01 {stroke-dasharray: 4914; stroke-dashoffset: 4914; animation: ani1 2s linear 1s forwards;}
+ .visual.motion #svgAni02 {stroke-dasharray: 180; stroke-dashoffset: 180; animation: ani2 0.5s linear 3.0s forwards;} */
 
 
  @keyframes ani1{
@@ -106,7 +106,7 @@ svg 모션
 .intro-detail {height: 650px;}
 
 /* about */
-.about{position: relative; height: 850px; background-color: #1c2b3c; color: #A9BCD0; padding: 40px 40px }
+.about{position: relative; height: 850px; background-color: #1c2b3c; color: #A9BCD0; padding: 40px 40px;}
 .about .about-title {font-size: 64px; position: absolute; top: 40px; left: 40px;}
 .about .about-circle {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 400px; height: 400px; border-radius: 100%; background-color: #A9BCD0; z-index: 2; background: url("../images/profile/profile.jpeg") no-repeat; background-size: cover; background-position: 0% 15%;}
 .about .about-circle-wt {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 480px; height: 480px; border-radius: 100%; background-color: rgb(28, 43, 60); z-index: 1;}
@@ -264,14 +264,14 @@ svg 모션
 .team-con01 .team-textBox {text-align: center;}
 .team-con01 .team-textBox.main {position: relative;}
 .team-con01 .team-textBox.main p {display: flex; flex-direction: column; position: absolute; top: 70%; left: 50%; transform: translate(-50%,-50%);}
-.team-con01 .team-textBox, .team-log {width: 150px; margin: 0 auto 25px;}
+.team-con01 .team-textBox, .team-log {position: relative; width: 150px; margin: 0 auto 25px;}
 .team-con01 .team-textBox, .team-log img {width: 100%;}
 .team-con01 .team-textBox, .team-title {font-size: 68px; margin-bottom: 10px; font-weight: bolder; letter-spacing: -1px; color: #f45b40;}
 .team-con01 .team-textBox .team-txt {letter-spacing: -1px; font-size: 18px;}
 
 /* team-gallery */
-.team-gallery {width: 100%;  padding: 250px 0;}
-.team-gallery .team-inner {width: 70%; height: 600px;  padding: 40px; margin: 0 auto; display: flex; justify-content: space-between; }
+.team-gallery {width: 100%;  padding: 250px 0; border: 3px solid blue;}
+.team-gallery .team-inner {margin: 0 auto; padding: 0 80px; display: flex; justify-content: space-between; }
 .team-gallery .team-inner .team-textBox {width: 45%;}
 .team-gallery .team-inner .team-textBox h2 {color: blue; font-size: 24px;}
 .team-gallery .team-inner .team-textBox .team-txt {font-weight: bolder; color: #1c2b3c; font-size: 32px;}
@@ -297,3 +297,22 @@ svg 모션
 .team-gallery .team-inner .team-imgBox li.team-img11 {transform: translateY(-50%) rotate(2deg); z-index: 11;}
 .team-gallery .team-inner .team-imgBox li.team-img12 {transform: translateY(-50%) rotate(0deg); z-index: 12;}
 .team-gallery .team-inner .team-imgBox li img {width: 100%; }
+
+/* 아래 방향 화살표 */
+.down-arrow{position: absolute; width: 300px; height: 300px; bottom: -25%; left: 50%; transform: translate(-50%,-50%); color: transparent;}
+
+.team-logo #arrow-01 {fill: transparent;   stroke-dasharray: 950; stroke-dashoffset: 950;}
+.team-logo #arrow-02 {fill: transparent;   stroke-dasharray: 96; stroke-dashoffset: 96;}
+.team-logo.arrow-dr #arrow-01 {stroke-dasharray: 950; stroke-dashoffset: 950; animation: ani1 1s linear forwards;}
+.team-logo.arrow-dr #arrow-02 {stroke-dasharray: 96; stroke-dashoffset: 96; animation: ani2 1s linear 1s forwards; }
+
+
+ @keyframes ani1{
+    0% {stroke-dashoffset: 950;}
+    100% {stroke-dashoffset: 0;}
+}
+
+@keyframes ani2{
+    0% {stroke-dashoffset: 96;}
+    100% {stroke-dashoffset: 0;}
+}

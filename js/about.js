@@ -10,7 +10,7 @@ $(function () {
           trigger: '.about',
           pin: true, // .about 섹션 고정
           scrub: 1,
-          start: 'top 10%',
+          start: 'top 0%',
           end: '200%',
           //   markers: true,
         },

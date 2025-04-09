@@ -28,17 +28,20 @@ $(function () {
     .timeline({
       scrollTrigger: {
         trigger: '.team-logo',
-        start: '40% 100%',
-        end: '0% 100%',
+        start: '50% 80%', // 요소가 뷰포트의 80% 위치에 들어오면 시작
+        end: '50% -60%', // 요소가 뷰포트의 20% 위치에 도달하면 종료
         scrub: 1,
-        markers: true,
+        onEnter: () => $('.team-logo').addClass('arrow-dr'),
+        onLeave: () => $('.team-logo').removeClass('arrow-dr'),
+        onEnterBack: () => $('.team-logo').addClass('arrow-dr'),
+        onLeaveBack: () => $('.team-logo').removeClass('arrow-dr'),
+        // markers: true,
       },
     })
     .from('.team-logo', {
       y: 100, // 아래에서 100px 위로
       opacity: 0, // 처음에는 투명
       duration: 5, // 애니메이션 지속시간
-      ease: 'power2.out', // 부드러운 움직임
     }),
     0.3;
 });
