@@ -1,7 +1,8 @@
-ㅠ@charset "utf-8";
+@charset "utf-8";
 /* 구글 폰트 */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+.test{ height: 1000px; background-color: yellow;}
 /* reset */
 * {margin: 0;padding: 0; box-sizing: border-box;}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
@@ -103,7 +104,6 @@ svg 모션
 /* intro */
 
 .intro{display: flex; flex-direction: column; justify-content: center; align-items: center; height: 650px; background: rgb(28, 43, 60); color: #fff; font-weight: bolder; font-size: 96px;}
-.intro-detail {height: 650px;}
 
 /* about */
 .about{position: relative; height: 850px; background-color: #1c2b3c; color: #A9BCD0; padding: 40px 40px;}
@@ -248,7 +248,7 @@ svg 모션
 .sd-pf2 {font-size: 80px;}
 
 /* side-portfolio */
-.sd-pf-st { /* height: 100vh; */ background-color: #fff;color: #1c2b3c;}
+.sd-pf-st {background-color: #fff;color: #1c2b3c; padding-bottom: 500px;}
 .sd-pf-st .title {width: 100%; font-size: 170px; line-height: 1.1; text-align: center; padding-top: 30vh; box-sizing: border-box;}
 .sd-pf-st .title {font-size: 220px;}
 .sd-pf-st .workList {display: flex; justify-content: space-between; flex-wrap: wrap; width: 70%; margin: 0 auto;}
@@ -270,7 +270,7 @@ svg 모션
 .team-con01 .team-textBox .team-txt {letter-spacing: -1px; font-size: 18px;}
 
 /* team-gallery */
-.team-gallery {width: 100%;  padding: 250px 0; border: 3px solid blue;}
+.team-gallery {width: 100%;  padding: 250px 0;}
 .team-gallery .team-inner {margin: 0 auto; padding: 0 80px; display: flex; justify-content: space-between; }
 .team-gallery .team-inner .team-textBox {width: 45%;}
 .team-gallery .team-inner .team-textBox h2 {color: blue; font-size: 24px;}
@@ -315,4 +315,94 @@ svg 모션
 @keyframes ani2{
     0% {stroke-dashoffset: 96;}
     100% {stroke-dashoffset: 0;}
+}
+
+/* hobby intro */
+.sd-pf-st-hobby {position: relative; height: 1000px; background-color: #fff;color: #1c2b3c;}
+.sd-pf-st-hobby .title {width: 100%; font-size: 170px; line-height: 1.1; text-align: center; padding-top: 30vh; box-sizing: border-box;}
+.sd-pf-st-hobby .title {font-size: 220px;}
+.sd-pf-st-hobby .title .c {font-size: 20px; color: blue; font-weight: 500;}
+.hobby-end-point {position: absolute; bottom: 0; width: 100%; height: 100px; }
+
+
+/* hobby */
+.hobby {position: relative; background-color: #fff;}
+
+.hobby ul {display: flex; box-sizing: border-box; padding: 0 30%;}
+
+.hobby ul li {display: flex; justify-content: center; align-items: center; width: 800px; height: 520px; flex-shrink: 0 !important;}
+
+.hobby ul li > div {width: 600px; border: 2px solid rgba(211, 211, 211,0.5); border-radius: 20px;}
+
+.hobby ul li a {position: relative; display: block; width: 100%;}
+
+.hobby ul li a .hobby-imgBox {position: relative; overflow: hidden; border-radius: 20px;}
+
+.hobby ul li a .hobby-imgBox img { width: 100%; margin-top: 130px;} 
+.hobby ul li a .hobby-imgBox:first-child {width: 100%; height: 200px;}
+
+.hobby ul li a .textBox {position: absolute; left: 0; top: 0; color: #1c2b3c; text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);}
+
+.hobby ul li a .textBox .title {font-size: 52px; text-shadow: 3px 3px 5px rgba(255, 255, 255, 0.3);}
+
+.hobby ul li a .textBox .text {font-size: 20px; padding-left: 5px;}
+
+.hobby ul li a .textBox {opacity: 0;}
+
+/* counter */
+.hobby .counter {position: absolute; font-size: 50px; right: 8%; bottom: 3%; letter-spacing: -3px; color: #1c2b3c; text-shadow: 3px 3px 5px rgba(255, 255, 255, 0.3);  z-index: 1000;}
+
+.hobby .counter .now {font-size: 50px;}
+
+.hobby ul li a .num {width: 100%;}
+
+/* hobby des */
+.hobby-title {font-size: 64px; color: blue; font-weight: bolder;}
+.hobby-des {font-size: 20px; color: rgba(28, 43, 60,0.7); font-weight: bolder;}
+
+
+/* portfolio process */
+.process-intro {position: relative; height: 650px; background: rgb(28, 43, 60); margin-top: 400px; letter-spacing: -2px; font-size: 8vw; padding: 100px 0 0 0;}
+.process-intro .process-intro-title .process-a {position: absolute; left: 15%; top: 40%; transform: translateY(-50%);font-weight: bolder; -webkit-text-stroke: 1px #d4af37;}
+.process-intro .process-intro-title .process-b {position: absolute; right: 15%; top: 60%; transform: translateY(-50%); color: #fff;}
+
+.step1 {display: flex; flex-direction: column; justify-content: center; align-items: center; height: 650px; background-color: #1c2b3c; }
+
+.step1 div:first-child {padding: 20px 70px; font-size: 82px; border: 1px solid #fff; border-radius: 40px; margin-bottom: 20px; -webkit-text-fill-color: rgba(255, 255, 255, 0.2); -webkit-background-clip: text; background-repeat: no-repeat; background-image: linear-gradient(#fff, #fff); background-size: 0% 100%;}
+.step1 div:last-child {font-size: 32px; font-weight: bolder; -webkit-text-fill-color: rgba(255, 255, 255, 0.2); -webkit-background-clip: text; background-repeat: no-repeat; background-image: linear-gradient(#fff, #fff); background-size: 0% 100%;}
+
+.brain {position: relative; padding: 80px; height: 850px; background-color: #fff; color: #1c2b3c;}
+.brain-title {border: 1px solid #fff; position: relative; border: 1px solid black; height: 200px;} 
+.brain-title span {font-size: 80px;} 
+.brain-title span:nth-child(1) {letter-spacing: -5px; -webkit-text-fill-color: rgb(255, 165, 0, 0.2); -webkit-background-clip: text; background-repeat: no-repeat; background-image: linear-gradient(rgb(255, 165, 0), rgb(255, 165, 0)); background-size: 0% 100%;}
+.brain-title span:nth-child(2) {position: absolute; top: 70px; left: 40px; -webkit-text-fill-color: rgb(28, 42, 59,0.2); -webkit-background-clip: text; background-repeat: no-repeat; background-image: linear-gradient(rgb(28, 43, 60), rgb(28, 43, 60)); background-size: 0% 100%;}
+.brain-img {position: absolute; right: 80px; bottom: 80px; background-image: url('../images/step/brain.png'); background-position: center; background-size: cover; background-repeat: no-repeat; width: 620px; height: 420px;}
+.brain-about {position: absolute; left: 80px; bottom: 100px;} 
+.brain-about p:first-child {font-weight: bolder; font-size: 32px;}
+.brain-about p:last-child {font-size: 16px;}
+/* *********************************************************************************** */
+
+/* 반응형 */
+@media screen and (max-width: 1650px){
+    /* 데스크탑 기술 */
+}
+
+@media (min-width: 1025px) {
+  /* 데스크탑 기술 */
+  .skill {height: auto;}
+  .visual .subText {margin-left: 5%;}
+  .text-banner {font-size: 48px; line-height: 50px;}
+  .about-content.rg {right: 2%;}
+  .about-content.rt {right: 1%;}
+  .card-container {margin:  0 45px;}
+  .infoProject .inner .imgBox {width: 65%;}
+  .infoProject .inner .textBox {width: 30%;}
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* 태블릿 기술 */
+}
+
+@media (max-width: 768px) {
+  /* 모바일 기술 */
 }

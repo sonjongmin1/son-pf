@@ -93,5 +93,25 @@ $(function () {
       },
     })
     .to('.sd-pf-st .title .a', { x: '-100%', ease: 'none', duration: 5 }, 0)
-    .to('.sd-pf-st .title .b', { x: '100%', ease: 'none', duration: 5 }, 0);
+    .to('.sd-pf-st .title .b', { x: '100%', ease: 'none', duration: 5 }, 0)
+    .to(
+      'body',
+      {
+        backgroundColor: '#fff',
+        color: '#1c2b3c',
+        ease: 'none',
+        duration: 5,
+      },
+      0
+    )
+    .to(
+      '.sd-pf-st',
+      {
+        backgroundColor: '#fff',
+        color: '#1c2b3c',
+        ease: 'none',
+        duration: 5,
+      },
+      0
+    );
 });
