@@ -196,12 +196,14 @@ svg 모션
 
 
 /* imgBox에 active 클래스가 붙을 때 */
-.imgBox {position: relative; overflow: hidden; transition: all 0.4s; border-radius: 10px;}
+.imgBox, .storyBox {position: relative; overflow: hidden; transition: all 0.4s; border-radius: 10px;}
+ 
 /* 설계구조 맨위 after 중간 before 맨아래 이미지 */
 .imgBox::before {content: ''; width:100%; height: 100%; background: rgba(28, 43, 60,0.7); position: absolute; left: 0; top: 0; transition: all 0.8s; transition-delay: 0s; z-index: 2;}
 .imBox::after {content: ''; width: 100%; height: 100%; background: #111606; position: absolute; left: 0; top: 0; transition: all 0.8s; z-index: 3;}
 .imgBox.active::before{height: 0;}
 .imgBox.active::after{height: 0;}
+
 
 .textBox span {margin:50px 0; transition: all 0.8s; opacity: 0;}
 .textBox.active span {margin: 0; opacity: 1;}
@@ -374,7 +376,7 @@ svg 모션
 
 .pro {position: relative; padding: 80px; height: 850px; background-color: #fff; color: #1c2b3c;}
 .storyboard {height: 600px;}
-.pro-title {border: 1px solid #fff; position: relative; height: 200px; z-index: 1000;} 
+.pro-title {position: relative; height: 200px; z-index: 1000;} 
 .pro-title span {font-size: 80px;} 
 .pro-title span:nth-child(1) {letter-spacing: -5px; -webkit-text-fill-color: rgb(255, 165, 0, 0.2); -webkit-background-clip: text; background-repeat: no-repeat; background-image: linear-gradient(rgb(255, 165, 0), rgb(255, 165, 0)); background-size: 0% 100%;}
 .pro-title span:nth-child(2) {position: absolute; -webkit-text-fill-color: rgb(28, 42, 59,0.2); -webkit-background-clip: text; background-repeat: no-repeat; background-image: linear-gradient(rgb(28, 43, 60), rgb(28, 43, 60)); background-size: 0% 100%;}
@@ -414,41 +416,61 @@ svg 모션
 .storyboard.pro .pro-title span:nth-child(2) {top: 70px; right: 40px;}
 
 /* ystack시작 */
-
-.yScroll-title {border: 1px solid blue; position: relative; height: 100px; width: 100%; font-size: 32px;}  
+.yScroll-title {position: relative; height: 100px; width: 100%; font-size: 32px;}  
 .yScroll-title p:nth-child(1) {position: absolute; top: 0%;  transform: translateY(-50%); right: 0; letter-spacing: -5px; color: orange; font-size: 80px;}
 .yScroll-title p:nth-child(2) {position: absolute; top: 60%; right: 60px; transform: translateY(-50%); font-size: 32px;}
 
 
-.cloneWrap {position: relative; display: flex; flex-direction: column; justify-content: center; border-radius: 50px 50px 0 0; box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3); height: 850px; background-color: #fff; overflow: hidden; padding: 0px 80px;}
+.cloneWrap {position: relative; display: flex; flex-direction: column; justify-content: center; border-radius: 50px 50px 0 0; box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3); height: 850px; background-color: #fff; overflow: hidden; padding: 80px;}
 
-.cloneWrap .conBox {display: flex; justify-content: space-between; border: 1px solid blue; height: 460px; overflow: hidden;}
+.cloneWrap .conBox {display: flex; justify-content: space-between; height: auto; overflow: hidden; padding: 50px;}
 
-.cloneWrap .conBox li.left { width: 50%; border: 1px solid red;}
+.cloneWrap .conBox li.left { width: 50%;  overflow: hidden; height: 500px !important;}
 
-.cloneWrap .conBox li.left a {width: 80%; height: 100%; display: block; border: 1px solid orange;}
+.cloneWrap .conBox li.left a {width: 80%; height: 100%; display: block;}
 
-.cloneWrap .conBox li.left a p.img {width: 100%; border: 1px solid pink;}
+.cloneWrap .conBox li.left a p.img {width: 100%; background-color: rgb(245, 245, 245); padding: 40px; border-radius: 20px;}
 
-.cloneWrap .conBox li.left a p.img img {width: 100%; border: 1px solid skyblue;}
+.cloneWrap .conBox li.left a p.img img {width: 100%; border-radius: 20px;}
 
-.cloneWrap .conBox li.right {width: 50%; border: 1px solid black;}
+.conBox-scroll-container { width: 100%; display: flex; flex-direction: column; position: absolute; top: 0;  animation: scrollUpDown 3s ease-in-out infinite alternate; }
+.conBox-scroll-container.autoImg {transition: transform 1s linear;}
 
-.cloneWrap .conBox li.right .tit {font-size: 60px; line-height: 0.9; border: 1px solid black;}
 
-.cloneWrap .conBox li.right .tit span {display: block; border: 1px solid black;}
-
-.cloneWrap .conBox li.right .txtBox {width: 60%; background-color: yellow; line-height: 1.5; border: 1px solid black;}
-
-.cloneWrap .conBox li.right .txtBox .eng {font-size: 26px; line-height: 1.2; border: 1px solid black;}
-
-.cloneWrap .conBox li.right .txtBox .kor {font-size: 15px; letter-spacing: -1px; border: 1px solid black;}
-
-.cloneWrap .conBox li.right .txtBox .skill li {position: relative; margin-bottom: 10px; padding-left: 20px; border: 1px solid black;
+@keyframes scrollUpDown {
+  0% {
+    transform: translateY(0); /* 시작 위치 */
+  }
+  100% {
+    transform: translateY(calc(-100% + 500px)); /* mockup 높이 제외한 만큼 위로 이동 */
+  }
 }
 
+/* 
+<div class="imgBox mockup">
+    <div class="scroll-container soop">
+        <img src="./images/full-screen/soop.jpg" alt="#" />
+    </div>
+</div>
+
+.scroll-container { width: 100%; display: flex; flex-direction: column; position: absolute; top: 0;}
+.scroll-container.soop {transition: transform 1s linear;}
+*/
+
+.cloneWrap .conBox li.right {display: flex; flex-direction: column;  width: 50%; }
+
+.cloneWrap .conBox li.right .tit {font-size: 60px; line-height: 0.9;  margin-bottom: 30px;}
+
+.cloneWrap .conBox li.right .tit span {display: block; font-size: 84px; font-weight: bolder;}
+
+.cloneWrap .conBox li.right .txtBox {width: 90%; line-height: 1.5; padding-left: 10px;}
+
+.cloneWrap .conBox li.right .txtBox .eng {font-size: 24px; line-height: 1.2; margin-bottom: 30px; color: rgba(28, 43, 60, 0.9);}
+
+.cloneWrap .conBox li.right .txtBox .kor {font-size: 15px; letter-spacing: -1px;  margin-bottom: 30px;}
+
 /**************** draw ****************/
-.draw {fill: none; stroke: transparent; stroke-miterlimit: 10; position: absolute; top: 10%; z-index: 500;}
+.draw {fill: none; stroke: transparent; stroke-miterlimit: 10; position: absolute; top: 0%; z-index: 500;}
 
 .Idea-sketch.active .draw {fill: none; stroke: rgba(28, 43, 60, 0.8); stroke-miterlimit: 10; }
 
@@ -465,7 +487,7 @@ svg 모션
 
 /* 아이디어 스케치 */
 .Idea-sketch {height: auto;} 
-.Idea-sketch .list li{width: 100px; height: 100px; border: 1px solid blue;}
+.Idea-sketch .list li{width: 100px; height: 100px;}
 .Idea-sketch .list li img {width: 100%;}
 /* *********************************************************************************** */
 /* 반응형 */
