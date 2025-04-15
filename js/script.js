@@ -33,8 +33,8 @@ $(function () {
 });
 
 $(function () {
-  $('.down-arrow')
-    .find('#arrow-02')
+  $('.content1')
+    .find('.draw')
     .each(function (i, path) {
       let length = path.getTotalLength();
       // alert(length);

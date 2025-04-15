@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./plugin/splitting.min.js"></script>
+    <script src="./plugin/jquery-3.3.1.min.js"></script>
+    <script src="./plugin/scrolla.jquery.min.js"></script>
+    <script src="./plugin/jquery.simplyscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+      }
+
+      .testBox {
+        width: 100%;
+        height: 100%;
+        background-color: red;
+      }
+      .testBox2 {
+        width: 100%;
+        height: 100%;
+        background-color: orange;
+      }
+      .testBox3 {
+        width: 100%;
+        height: 100%;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="testBox"></section>
+    <section class="testBox2"></section>
+    <section class="testBox3"></section>
+  </body>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    $(function () {
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: '.testBox2', // 스크롤을 감지할 대상
+          start: '0% 0%', // 트리거 시작점
+          end: '100% 0%', // 트리거 종료점
+          pin: true,
+          scrub: 1, // 스크롤에 따라 애니메이션 연동
+          markers: true, // 디버깅을 위한 마커 표시
+        },
+      });
+    });
+  </script>
+</html>

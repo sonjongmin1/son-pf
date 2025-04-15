@@ -2,7 +2,7 @@
 /* 구글 폰트 */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-.test{ height: 1000px; background-color: yellow;}
+.test{ height: 100px; background-color: yellow;}
 /* reset */
 * {margin: 0;padding: 0; box-sizing: border-box;}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
@@ -81,7 +81,7 @@ svg 모션
  .visual.motion #svgAni02 {stroke-dasharray: 180; stroke-dashoffset: 180; animation: ani2 0.5s linear 3.0s forwards;} */
 
 
- @keyframes ani1{
+ /* @keyframes ani1{
     0% {stroke-dashoffset: 4914;}
     100% {stroke-dashoffset: 0;}
 }
@@ -89,13 +89,14 @@ svg 모션
 @keyframes ani2{
     0% {stroke-dashoffset: 180;}
     100% {stroke-dashoffset: 0;}
-}
+} */
 
 /* text 배너 */
 
 .text-banner{position: relative; color : #FFB84D; font-size: 64px; text-wrap: nowrap; padding: 40px 0;}
 .text-banner ul {white-space: nowrap; display: inline-block;}
 .text-banner ul li { margin: 20px 50px;}
+.text-banner ul li img {width: 200px; height: 200px;}
 
 /* simplyScroll */
 .simply-scroll .simply-scroll-clip {overflow: hidden;}
@@ -140,7 +141,7 @@ svg 모션
 .side.front span {font-size: 26px;}
 
 .front { background-color: rgb(248, 245, 255); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); color: #1c2b3c; }  
-.back { background-color: rgb(248, 250, 255); color: #1c2b3c; transform: translateX(-30px) rotateY(180deg); border: 2px solid #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);}  
+.back { background-color: rgb(248, 250, 255); color: #1c2b3c; transform: rotateY(180deg); border: 2px solid #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);}  
 .back p:nth-child(1){font-size: 26px;}
 
 
@@ -366,22 +367,107 @@ svg 모션
 .process-intro .process-intro-title .process-a {position: absolute; left: 15%; top: 40%; transform: translateY(-50%);font-weight: bolder; -webkit-text-stroke: 1px #d4af37;}
 .process-intro .process-intro-title .process-b {position: absolute; right: 15%; top: 60%; transform: translateY(-50%); color: #fff;}
 
-.step1 {display: flex; flex-direction: column; justify-content: center; align-items: center; height: 650px; background-color: #1c2b3c; }
+.step {display: flex; flex-direction: column; justify-content: center; align-items: center; height: 650px; background-color: #1c2b3c; }
 
-.step1 div:first-child {padding: 20px 70px; font-size: 82px; border: 1px solid #fff; border-radius: 40px; margin-bottom: 20px; -webkit-text-fill-color: rgba(255, 255, 255, 0.2); -webkit-background-clip: text; background-repeat: no-repeat; background-image: linear-gradient(#fff, #fff); background-size: 0% 100%;}
-.step1 div:last-child {font-size: 32px; font-weight: bolder; -webkit-text-fill-color: rgba(255, 255, 255, 0.2); -webkit-background-clip: text; background-repeat: no-repeat; background-image: linear-gradient(#fff, #fff); background-size: 0% 100%;}
+.step div:first-child {padding: 20px 70px; font-size: 82px; border: 1px solid #fff; border-radius: 40px; margin-bottom: 20px; -webkit-text-fill-color: rgba(255, 255, 255, 0.2); -webkit-background-clip: text; background-repeat: no-repeat; background-image: linear-gradient(#fff, #fff); background-size: 0% 100%;}
+.step div:last-child {font-size: 32px; font-weight: bolder; -webkit-text-fill-color: rgba(255, 255, 255, 0.2); -webkit-background-clip: text; background-repeat: no-repeat; background-image: linear-gradient(#fff, #fff); background-size: 0% 100%;}
 
-.brain {position: relative; padding: 80px; height: 850px; background-color: #fff; color: #1c2b3c;}
-.brain-title {border: 1px solid #fff; position: relative; border: 1px solid black; height: 200px;} 
-.brain-title span {font-size: 80px;} 
-.brain-title span:nth-child(1) {letter-spacing: -5px; -webkit-text-fill-color: rgb(255, 165, 0, 0.2); -webkit-background-clip: text; background-repeat: no-repeat; background-image: linear-gradient(rgb(255, 165, 0), rgb(255, 165, 0)); background-size: 0% 100%;}
-.brain-title span:nth-child(2) {position: absolute; top: 70px; left: 40px; -webkit-text-fill-color: rgb(28, 42, 59,0.2); -webkit-background-clip: text; background-repeat: no-repeat; background-image: linear-gradient(rgb(28, 43, 60), rgb(28, 43, 60)); background-size: 0% 100%;}
-.brain-img {position: absolute; right: 80px; bottom: 80px; background-image: url('../images/step/brain.png'); background-position: center; background-size: cover; background-repeat: no-repeat; width: 620px; height: 420px;}
-.brain-about {position: absolute; left: 80px; bottom: 100px;} 
-.brain-about p:first-child {font-weight: bolder; font-size: 32px;}
-.brain-about p:last-child {font-size: 16px;}
+.pro {position: relative; padding: 80px; height: 850px; background-color: #fff; color: #1c2b3c;}
+.storyboard {height: 600px;}
+.pro-title {border: 1px solid #fff; position: relative; height: 200px; z-index: 1000;} 
+.pro-title span {font-size: 80px;} 
+.pro-title span:nth-child(1) {letter-spacing: -5px; -webkit-text-fill-color: rgb(255, 165, 0, 0.2); -webkit-background-clip: text; background-repeat: no-repeat; background-image: linear-gradient(rgb(255, 165, 0), rgb(255, 165, 0)); background-size: 0% 100%;}
+.pro-title span:nth-child(2) {position: absolute; -webkit-text-fill-color: rgb(28, 42, 59,0.2); -webkit-background-clip: text; background-repeat: no-repeat; background-image: linear-gradient(rgb(28, 43, 60), rgb(28, 43, 60)); background-size: 0% 100%;}
+
+
+/* process content */
+/* brain */
+.brain-img {position: absolute; right: 80px; bottom: 80px; background-image: url('../images/process/brain.png'); background-position: center; background-size: cover; background-repeat: no-repeat; width: 620px; height: 420px;}
+/* lt 왼쪽 정보 */
+.lt-about {position: absolute; left: 80px; bottom: 100px;} 
+.lt-about p:first-child {font-weight: bolder; font-size: 32px;}
+.lt-about p:last-child {font-size: 16px;}
+
+/* info */
+.info-img {position: absolute; left: 140px; bottom: 80px; background-image: url('../images/process/Information-Architecture.png'); background-position: center; background-size: cover; background-repeat: no-repeat; width: 419px; height: 413px;}
+/* rg 오른쪽 정보 */
+.rg-about {position: absolute; right: 80px; bottom: 100px; z-index: 1000;} 
+.rg-about p:first-child {font-weight: bolder; font-size: 32px; text-align: end;}
+.rg-about p:not(:first-child) {font-size: 16px; text-align: end;}
+
+/* story */
+/* lt 왼쪽 정보 */
+.story-about {position: absolute; right: 80px; bottom: 100px;} 
+.story-about p:first-child {font-weight: bolder; font-size: 32px; text-align: end;}
+.story-about p:last-child {font-size: 16px; text-align: end;}
+
+/* process title 위치조정 */
+/* 왼쪽 */
+.brain.pro .pro-title span:nth-child(2),
+.info-structure .pro-title span:nth-child(2),
+.reference-survey .pro-title span:nth-child(2){top: 70px; left: 40px;}
+/* 오른쪽 */
+.Idea-sketch {height: 850px;}
+.Idea-sketch.pro .pro-title span:nth-child(1),
+.storyboard.pro .pro-title span:nth-child(1){position: absolute; right: 0;}
+.Idea-sketch.pro .pro-title span:nth-child(2),
+.storyboard.pro .pro-title span:nth-child(2) {top: 70px; right: 40px;}
+
+/* ystack시작 */
+
+.yScroll-title {border: 1px solid blue; position: relative; height: 100px; width: 100%; font-size: 32px;}  
+.yScroll-title p:nth-child(1) {position: absolute; top: 0%;  transform: translateY(-50%); right: 0; letter-spacing: -5px; color: orange; font-size: 80px;}
+.yScroll-title p:nth-child(2) {position: absolute; top: 60%; right: 60px; transform: translateY(-50%); font-size: 32px;}
+
+
+.cloneWrap {position: relative; display: flex; flex-direction: column; justify-content: center; border-radius: 50px 50px 0 0; box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3); height: 850px; background-color: #fff; overflow: hidden; padding: 0px 80px;}
+
+.cloneWrap .conBox {display: flex; justify-content: space-between; border: 1px solid blue; height: 460px; overflow: hidden;}
+
+.cloneWrap .conBox li.left { width: 50%; border: 1px solid red;}
+
+.cloneWrap .conBox li.left a {width: 80%; height: 100%; display: block; border: 1px solid orange;}
+
+.cloneWrap .conBox li.left a p.img {width: 100%; border: 1px solid pink;}
+
+.cloneWrap .conBox li.left a p.img img {width: 100%; border: 1px solid skyblue;}
+
+.cloneWrap .conBox li.right {width: 50%; border: 1px solid black;}
+
+.cloneWrap .conBox li.right .tit {font-size: 60px; line-height: 0.9; border: 1px solid black;}
+
+.cloneWrap .conBox li.right .tit span {display: block; border: 1px solid black;}
+
+.cloneWrap .conBox li.right .txtBox {width: 60%; background-color: yellow; line-height: 1.5; border: 1px solid black;}
+
+.cloneWrap .conBox li.right .txtBox .eng {font-size: 26px; line-height: 1.2; border: 1px solid black;}
+
+.cloneWrap .conBox li.right .txtBox .kor {font-size: 15px; letter-spacing: -1px; border: 1px solid black;}
+
+.cloneWrap .conBox li.right .txtBox .skill li {position: relative; margin-bottom: 10px; padding-left: 20px; border: 1px solid black;
+}
+
+/**************** draw ****************/
+.draw {fill: none; stroke: transparent; stroke-miterlimit: 10; position: absolute; top: 10%; z-index: 500;}
+
+.Idea-sketch.active .draw {fill: none; stroke: rgba(28, 43, 60, 0.8); stroke-miterlimit: 10; }
+
+.Idea-sketch.active .draw {fill: transparent;  stroke-dasharray: 2926; stroke-dashoffset: 2926;}
+.Idea-sketch.active .draw {stroke-dasharray: 2926; stroke-dashoffset: 2926; animation: ani1 3s linear forwards;}
+
+ @keyframes ani1{
+    0% {stroke-dashoffset: 2926;}
+    100% {stroke-dashoffset: 0;}
+}
+
+
+/* ystack 끝*/
+
+/* 아이디어 스케치 */
+.Idea-sketch {height: auto;} 
+.Idea-sketch .list li{width: 100px; height: 100px; border: 1px solid blue;}
+.Idea-sketch .list li img {width: 100%;}
 /* *********************************************************************************** */
-
 /* 반응형 */
 @media screen and (max-width: 1650px){
     /* 데스크탑 기술 */
