@@ -10,6 +10,7 @@
     <script src="./plugin/jquery-3.3.1.min.js"></script>
     <script src="./plugin/scrolla.jquery.min.js"></script>
     <script src="./plugin/jquery.simplyscroll.min.js"></script>
+    <script src="https://unpkg.com/gsap/dist/Observer.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
   </head>
@@ -668,10 +669,17 @@
               </a>
             </li>
             <li class="right">
-              <div class="tit"><span class="en2">Project</span></div>
+              <div class="tit"><span class="en2">Main Project</span></div>
               <div class="txtBox">
-                <p class="eng">내용을 입력하세요.</p>
-                <p class="kor">내용을 입력하세요 두번째</p>
+                <p class="eng">
+                  This section showcases the main project. On the left, there is
+                  an image of the project, and on the right, the project is
+                  described.
+                </p>
+                <p class="kor">
+                  메인 프로젝트를 나타내는 섹션입니다. 왼쪽에는 프로젝트의 사진,
+                  오른쪽에는 프로젝트를 설명하는 방식으로 구현하였습니다.
+                </p>
               </div>
             </li>
           </ul>
@@ -695,8 +703,16 @@
             <li class="right">
               <div class="tit"><span class="en2">Team Project</span></div>
               <div class="txtBox">
-                <p class="eng">내용을 입력하세요.</p>
-                <p class="kor">내용을 입력하세요 두번째</p>
+                <p class="eng">
+                  This section introduces the team project. By using a card
+                  stacking animation, I showcased the PPT created during the
+                  project and the activities I participated in.
+                </p>
+                <p class="kor">
+                  팀 프로젝트를 소개하는 섹션입니다. 카드 쌓기 애니메이션을
+                  활용하여, 팀 프로젝트에서 제작한 PPT와 제가 참여한 활동을
+                  표현하였습니다.
+                </p>
               </div>
             </li>
           </ul>
@@ -719,8 +735,15 @@
             <li class="right">
               <div class="tit"><span class="en2">Side Project</span></div>
               <div class="txtBox">
-                <p class="eng">내용을 입력하세요.</p>
-                <p class="kor">내용을 입력하세요 두번째</p>
+                <p class="eng">
+                  This section introduces side projects. These projects focus on
+                  functionality, such as weather API and guestbook
+                  implementations.
+                </p>
+                <p class="kor">
+                  사이드 프로젝트를 소개하는 섹션입니다. 날씨 API, 방명록 등
+                  기능 구현에 집중하여 만든 프로젝트들입니다.
+                </p>
               </div>
             </li>
           </ul>
@@ -760,17 +783,9 @@
       <!-- step 5 -->
       <section class="step step5">
         <div class="en2">step 5</div>
-        <div>레퍼런스 조사</div>
+        <div>제작</div>
       </section>
-      <section class="reference-survey pro">
-        <div class="pro-title Idea-sketch-title">
-          <span class="en2">05</span><span>Reference</span>
-        </div>
-        <div>
-          해외 웹사이트 2곳을 참고하여 포트폴리오의 전반적인 프로세스를
-          구성하였습니다.
-        </div>
-      </section>
+
       <!-- 나의 포트폴리오 -->
       <section class="pf-st" id="pf-section">
         <div class="pf-visual">
@@ -1253,6 +1268,7 @@
           </li>
         </ul>
       </section>
+
       <!-- hobby intro -->
       <section class="sd-pf-st-hobby">
         <div class="title">
@@ -1267,6 +1283,15 @@
       </section>
       <!-- hobby -->
       <section class="hobby">
+        <div class="hobby-con">
+          <p>HOBBY</p>
+          <p>
+            다양한 취미 활동을 통해 즐거움과 활력을 찾고 있습니다. 영화 감상,
+            자전거 타기, 달리기, 큐브 맞추기, 음악 감상 등 일상 속에서 색다른
+            재미를 느낄 수 있는 활동들을 좋아합니다.<br />
+            이러한 취미들은 일상에 즐거움을 더하는 좋은 원동력이 되고 있습니다.
+          </p>
+        </div>
         <div class="counter">
           <span class="now"></span>
           <!-- 현재리스트번호 -->
@@ -1280,15 +1305,6 @@
                 <div class="num" data-text="1"></div>
                 <div class="hobby-imgBox">
                   <img src="./images/hobby/bicycle.jpg" alt="이미지1" />
-                  <!-- <video
-                  class="riding"
-                  autoplay=""
-                  muted=""
-                  loop=""
-                  playinline=""
-                >
-                  <source src="./video/riding.mp4" type="video/mp4" />
-                </video> -->
                 </div>
                 <div class="textBox">
                   <p class="title en2">Bicycling</p>
@@ -1363,8 +1379,116 @@
           </li>
         </ul>
       </section>
-      <div class="test">테스트</div>
+      <!-- contact-intro -->
+      <section class="contact-intro" id="con-section">
+        <p class="a en2">Contact</p>
+        <p class="b en2">Page</p>
+        <!-- <p class="c en">연락처 페이지입니다. 봐주셔서 감사합니다:)</p> -->
+      </section>
+      <!-- jongmin 이미지 시작 -->
+      <section class="contact-wrap">
+        <div class="contact-visual">
+          <div class="contact-inner">
+            <h1 class="brandTit">
+              J.Min`S <br />
+              CONTACT
+            </h1>
+            <!-- <p class="contact-subTitle">손종민 연락처 페이지입니다.</p> -->
+            <div class="contact-logoWrap rotate">
+              <span id="t"><img src="./images/alphabet/T.png" alt="#" /></span>
+              <span id="h"><img src="./images/alphabet/H.png" alt="#" /></span>
+              <span id="a"><img src="./images/alphabet/A.png" alt="#" /></span>
+              <span id="n"><img src="./images/alphabet/N.png" alt="#" /></span>
+              <span id="k"><img src="./images/alphabet/K.png" alt="#" /></span>
+              <span id="s"><img src="./images/alphabet/S.png" alt="#" /></span>
+              <span id="f"><img src="./images/alphabet/F.png" alt="#" /></span>
+              <span id="o"><img src="./images/alphabet/O.png" alt="#" /></span>
+              <span id="r"><img src="./images/alphabet/R.png" alt="#" /></span>
+            </div>
+            <div class="contact-box">
+              <div class="contact-mainText">
+                <p>손종민 <span>연락처 페이지입니다.</span></p>
+              </div>
+              <div class="contact-subText">
+                <p>첫번째 내용을 입력하세요</p>
+                <p>두번째 내용을 입력하세요</p>
+              </div>
+              <div class="contact-subText">
+                <p>세번째 내용을 입력하세요</p>
+                <a href="#" class="contact-btn">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-wave">
+          <h2>visiting</h2>
+          <h2>visiting</h2>
+          <!-- <div>
+           
+          </div> -->
+        </div>
+      </section>
+      <!-- jongmin 이미지 끝  -->
     </div>
+    <!-- footer -->
+    <footer>
+      <div class="footer-box">
+        <div class="footer-left-box">
+          <p></p>
+        </div>
+        <div class="footer-right-box">
+          <p class="en2">Tel. 010-3122-8127</p>
+          <p class="en2">E. whdals0525@gmail.com</p>
+        </div>
+      </div>
+      <ul class="footer-menu en2">
+        <li>
+          <a
+            href="#"
+            class="scroll-link"
+            data-target="home-section"
+            data-splitting
+            >HOME</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="scroll-link"
+            data-target="about-section"
+            data-splitting
+            >ABOUT</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="scroll-link"
+            data-target="works-section"
+            data-splitting
+            >WORKS</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="scroll-link"
+            data-target="pf-section"
+            data-splitting
+            >PORTFOLIO</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="scroll-link"
+            data-target="con-section"
+            data-splitting
+            >CONTACT</a
+          >
+        </li>
+      </ul>
+    </footer>
     <script src="./js/script.js"></script>
     <script src="./js/text-banner.js"></script>
     <script src="./js/fixTextScroll.js"></script>
@@ -1380,5 +1504,7 @@
     <script src="./js/yStack.js"></script>
     <script src="./js/draw.js"></script>
     <script src="./js/moveSection.js"></script>
+    <script src="./js/contact.js"></script>
+    <script src="./js/footer.js"></script>
   </body>
 </html>

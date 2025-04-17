@@ -185,16 +185,16 @@ $(function () {
     {
       backgroundSize: '0% 100%',
       borderWidth: '1px', // 초기 border-width
-      borderColor: 'rgba(255, 255, 255, 0.2)', // 초기 border-color
+      borderColor: 'rgba(28, 43, 60, 0.2)', // 초기 border-color
     },
     {
       backgroundSize: '100% 100%',
       borderWidth: '2px', // 최종 border-width
-      borderColor: '#fff', // 최종 border-color
+      borderColor: 'rgba(24,43,60,1)', // 최종 border-color
       scrollTrigger: {
         backgroundSize: '100% 100%',
         borderWidth: '5px', // 최종 border-width
-        borderColor: '#fff', // 최종 border-color
+        borderColor: 'rgba(24,43,60,1)', // 최종 border-color
         trigger: '.step.step5',
         pinnedContainer: '.step',
         start: '0% 60%',
@@ -356,41 +356,6 @@ $(function () {
       scrollTrigger: {
         trigger: '.storyboard .pro-title',
         pinnedContainer: '.storyboard .pro-title',
-        start: '0% 60%',
-        end: '50% 20%',
-        // markers: true,
-        scrub: 1,
-      },
-    }
-  );
-  // reference
-  gsap.fromTo(
-    '.reference-survey .pro-title span:nth-child(1)',
-    {
-      backgroundSize: '0% 100%',
-    },
-    {
-      backgroundSize: '100% 100%',
-      scrollTrigger: {
-        trigger: '.reference-survey .pro-title',
-        pinnedContainer: '.reference-survey .pro-title',
-        start: '0% 60%',
-        end: '50% 20%',
-        // markers: true,
-        scrub: 1,
-      },
-    }
-  );
-  gsap.fromTo(
-    '.reference-survey .pro-title span:nth-child(2)',
-    {
-      backgroundSize: '0% 100%',
-    },
-    {
-      backgroundSize: '100% 100%',
-      scrollTrigger: {
-        trigger: '.reference-survey .pro-title',
-        pinnedContainer: '.reference-survey .pro-title',
         start: '0% 60%',
         end: '50% 20%',
         // markers: true,
