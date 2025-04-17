@@ -63,7 +63,7 @@ window.onload = function () {
       start: '0% 100%',
       end: '20% 15%',
       scrub: 1,
-      markers: true,
+      // markers: true,
     },
   });
   // .text-wave 텍스트 색상 변경

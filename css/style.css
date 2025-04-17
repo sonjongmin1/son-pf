@@ -141,7 +141,7 @@ svg 모션
 .side.front span {font-size: 26px;}
 
 .front { background-color: rgb(248, 245, 255); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); color: #1c2b3c; }  
-.back { background-color: rgb(248, 250, 255); color: #1c2b3c; transform: rotateY(180deg); border: 2px solid #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);}  
+.back { background-color: rgb(248, 250, 255); color: #1c2b3c; transform: rotateY(180deg); border: 2px solid #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); font-family: "Public Sans", sans-serif;}  
 .back p:nth-child(1){font-size: 26px;}
 
 
@@ -151,7 +151,7 @@ svg 모션
 .progress-circle circle { fill: none; stroke-width: 10; stroke-linecap: round; }  
 .progress-circle .bg { stroke: #fff; }  
 .progress-circle .bar { stroke: #1c2b3c; stroke-dasharray: 314; stroke-dashoffset: 314; transition: stroke-dashoffset 1s ease-in-out; }  
-.percentage { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 18px; font-weight: bold; color: #1c2b3c; }
+.percentage { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 18px; font-weight: bold; color: #1c2b3c; font-family: "Public Sans", sans-serif;}
 
 /* 나의 포트폴리오 */
 .pf-st {margin: 0 auto; position: relative; overflow: hidden; background: #1c2b3c;}
@@ -336,7 +336,7 @@ svg 모션
 .hobby-title {font-size: 64px; color: blue; font-weight: bolder;}
 .hobby-des {font-size: 20px; color: rgba(28, 43, 60,0.7); font-weight: bolder;}
 .hobby-con {margin-bottom: 50px; padding: 40px;}
-.hobby-con p:first-child {font-size: 64px;}
+.hobby-con p:first-child {font-size: 64px; font-weight: bolder;}
 .hobby-con p:last-child {font-size: 16px; color: #1c2b3c;}
 
 /* hobby */
@@ -537,7 +537,7 @@ footer {z-index:0; position: absolute; width: 100%; bottom: 0;   padding: 500px 
 .footer-right-box p:first-child {border-bottom: 1px solid rgba(255,255,255,0.5);}
 
 
-.footer-menu {display: flex;  justify-content: center; }
+.footer-menu {display: flex;  justify-content: center; padding-bottom: 10px;}
 .footer-menu li {margin: 5px;}
 .footer-menu li:hover {color: #fff;}
 .footer-menu li a {position: relative;  padding: 5px 10px;  z-index: 1000;}
