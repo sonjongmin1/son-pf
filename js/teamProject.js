@@ -1,27 +1,57 @@
+// 1025px 이상 데스크탑
+
 $(function () {
-  gsap.registerPlugin(ScrollTrigger);
+  if (window.matchMedia('(min-width: 1025px)').matches) {
+    gsap.registerPlugin(ScrollTrigger);
 
-  let upBox = document.querySelectorAll('.upBox');
-  let upBoxExceptFirst = Array.from(upBox).slice(1); // 첫 번째 제외
+    let upBox = document.querySelectorAll('.upBox');
+    let upBoxExceptFirst = Array.from(upBox).slice(1); // 첫 번째 제외
 
-  let tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.team-gallery',
-      pin: true,
-      scrub: 3,
-      start: 'top top',
-      end: '+=400%', //시작부분에서 400%까지 스크롤한 후 종료
-      //   markers: true,
-    },
-  });
-  tl.from(upBoxExceptFirst, {
-    y: '400%',
-    duration: 8,
-    ease: 'none',
-    stagger: 6,
-  }); // stagger: 각각애니메이션의 시간차를 둠
-  tl.to(upBoxExceptFirst, { y: 0 });
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.team-gallery',
+        pin: true,
+        scrub: 3,
+        start: 'top top',
+        end: '+=400%', //시작부분에서 400%까지 스크롤한 후 종료
+        // markers: true,
+      },
+    });
+    tl.from(upBoxExceptFirst, {
+      y: '400%',
+      duration: 8,
+      ease: 'none',
+      stagger: 6,
+    }); // stagger: 각각애니메이션의 시간차를 둠
+    tl.to(upBoxExceptFirst, { y: 0 });
+  }
+
+  // 테블릿 769 ~ 1024
+  if (window.matchMedia('(min-width: 769px) and (max-width: 1024px)').matches) {
+    let upBox = document.querySelectorAll('.upBox');
+    let upBoxExceptFirst = Array.from(upBox).slice(1); // 첫 번째 제외
+
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.team-gallery',
+        pin: true,
+        scrub: 3,
+        start: '90% 90%',
+        end: '+=400%', //시작부분에서 400%까지 스크롤한 후 종료
+        // markers: true,
+      },
+    });
+    tl.from(upBoxExceptFirst, {
+      y: '400%',
+      duration: 8,
+      ease: 'none',
+      stagger: 6,
+    }); // stagger: 각각애니메이션의 시간차를 둠
+    tl.to(upBoxExceptFirst, { y: 0 });
+  }
 });
+
+// arrow svg 화살표 애니메이션
 
 $(function () {
   gsap

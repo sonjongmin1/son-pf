@@ -15,3 +15,19 @@ $(function () {
     },
   });
 });
+
+$(function () {
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: '.one-path-me',
+      start: '80% 100%',
+      end: '150% 20%',
+      scrub: 1,
+      // markers: true,
+      onEnter: () => $('.one-path-me').addClass('active'),
+      onLeave: () => $('.one-path-me').removeClass('active'),
+      onEnterBack: () => $('.one-path-me').addClass('active'),
+      onLeaveBack: () => $('.one-path-me').removeClass('active'),
+    },
+  });
+});

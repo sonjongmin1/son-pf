@@ -33,8 +33,8 @@ $(function () {
 });
 
 $(function () {
-  $('.content1')
-    .find('.draw')
+  $('.one-path')
+    .find('.one-path')
     .each(function (i, path) {
       let length = path.getTotalLength();
       // alert(length);
@@ -45,3 +45,4 @@ $(function () {
 // svgAni2 : 180
 // .arrow-01 : 950
 // .arrow-02 : 96
+// .one-path : 7896.06
