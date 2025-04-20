@@ -68,7 +68,7 @@ $(function () {
           start: '0% 100%',
           end: '0% 20%',
           scrub: 1,
-          markers: true,
+          // markers: true,
         },
       })
       .fromTo(
@@ -189,7 +189,7 @@ $(function () {
         start: '0% 100%',
         end: '0% 20%',
         scrub: 1,
-        markers: true,
+        // markers: true,
       },
     })
     .fromTo(

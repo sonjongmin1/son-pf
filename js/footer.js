@@ -7,7 +7,7 @@ $(function () {
       start: '100% 50%',
       end: '100% 50%',
       scrub: 1,
-      markers: true,
+      // markers: true,
     },
     y: -200,
     duration: 5,
