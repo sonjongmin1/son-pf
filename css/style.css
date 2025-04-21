@@ -532,6 +532,11 @@ footer {z-index:0; position: absolute; width: 100%; bottom: 0; padding: 500px 0 
     /* 데스크탑 기술 */
 }
 
+@media (min-width: 1025px) and (max-width: 1586px) {
+.vision {font-size: 20px;}
+}
+
+
 @media (min-width: 1025px) {
   /* 데스크탑 기술 */
   .skill {height: auto;}
@@ -543,6 +548,8 @@ footer {z-index:0; position: absolute; width: 100%; bottom: 0; padding: 500px 0 
   .infoProject .inner .imgBox {width: 65%;}
   .infoProject .inner .textBox {width: 30%;}
 }
+
+
 
 @media (min-width: 769px) and (max-width: 1024px) {
   /* 태블릿 기술 */
