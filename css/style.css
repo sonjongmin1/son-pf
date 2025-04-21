@@ -107,7 +107,7 @@ header .menuOpen {display: none; transition: 0.3s;}
 .skill-title { font-size: 64px; font-weight: bolder; margin-bottom: 80px; }
 .skill-title p:nth-child(1) {color: #ffa500; font-size: 32px; line-height: 20px; margin-top: 40px;}
 .skill-title p:nth-child(3) {color: rgba(28, 43, 60,0.35); font-size: 20px; line-height: 20px;}
-.skillBox {margin: auto; width: 300px; height: 800px; display: flex; flex-wrap: wrap; }
+.skillBox {margin: auto; width: 1000px; height: 800px; display: flex; flex-wrap: wrap; }
 .card-container {perspective: 1000px; position: relative; width: 200px; height: 200px; margin-right: 100px; }
 .card {width: 100%; height: 100%; position: absolute; transform-style: preserve-3d; transition: transform 0.6s;}
 .card-container:hover .card { transform: rotateY(180deg); }  
@@ -386,7 +386,7 @@ header .menuOpen {display: none; transition: 0.3s;}
 
 /* story */
 /* lt 왼쪽 정보 */
-.story-about {position: absolute; right: 80px; bottom: 100px;} 
+.story-about {position: absolute; right: 40px; bottom: 100px;} 
 .story-about p:first-child {font-weight: bolder; font-size: 32px; text-align: end;}
 .story-about p:last-child {font-size: 16px; text-align: end;}
 
@@ -648,26 +648,33 @@ footer {z-index:0; position: absolute; width: 100%; bottom: 0; padding: 500px 0 
   .skill {height: 100vh;} 
   .skill-title {font-size: 32px; margin-bottom: 40px;}
   .skill-title p:nth-child(3) {font-size: 14px;}
-  .skillBox {width: 330px; border: 1px solid black; height: auto;}
+  .skillBox {width: 330px; height: auto;}
   .side {font-size: 14px; width: 100%; height: 100%;}
   .side.front span {font-size: 12px;}
   .percentage {font-size: 14px;}
   .back p:nth-child(1) {font-size: 14px;}
-  .card-container {margin-right: 0; border: 1px solid black; width: 150px; height: 150px; margin-bottom: 10px; margin-left: 10px;}
+  .card-container {margin-right: 0; width: 150px; height: 150px; margin-bottom: 10px; margin-left: 10px;}
   .step {height: 300px;}
   .step div:first-child {font-size: 40px;}
   .step div:last-child {font-size: 20px;}
   .step div:first-child {padding: 15px 50px;}
   .pro {padding: 20px; height: 500px;}
   .process-intro {height: 300px;}
-  .pro-title {height: 100px; border: 1px solid black;}
-  .pro-title span {font-size: 40px;}
+  .pro-title {height: 100px;}
+  .pro-title span {font-size: 40px; height: auto;}
+  .info-structure.pro .pro-title span:nth-child(1) {letter-spacing: 0px;}
+  .info-structure .pro-title span:nth-child(2){margin-top: 10px; margin-left: 15px; height: auto; font-size: 28px; }
+  .info-structure .rg-about {bottom: 40px;}
+
   .lt-about p:first-child {font-size: 24px;}
   .lt-about p:last-child {font-size: 12px;}
   .brain-img {width: 285px; height: 195px; top: 135px; left: 40px;}
   .lt-about {left: 40px;  bottom: 20px;}
-  .info-img {width: 250px; height: 250px; top: 150px; left: 40px;}
+  .info-img {width: 195px; height: 250px; top: 150px; left: 40px;}
   .storyboard {height: 400px;}
+  .story-about {right: 25px;}
+  .story-about p:first-child {font-size: 24px;}
+  .story-about p:last-child {font-size: 14px;}
   .Idea-sketch.pro .pro-title span:nth-child(2), .storyboard.pro .pro-title span:nth-child(2) {top: 30px; right: 20px;}
   .text-banner ul li img {width: 100px; height: 100px;}
   .draw {top: 25%;}
@@ -697,21 +704,23 @@ footer {z-index:0; position: absolute; width: 100%; bottom: 0; padding: 500px 0 
   .infoProject .inner .textBox span.title {font-size: 16px;}
   .infoProject .inner .imgBox {width: 100%; }
   .github-ic-white, .new-ic {width: 30px; height: 30px;}
+  .team-con01 {height: 50vh;}
   .team-con01 .team-textBox, .team-title {font-size: 24px;}
-  .team-textBox img {width: 300px; height: 300px;}
-  .down-arrow {width: 100px; height: 100px; bottom: -60%;}
-  .team-con01 .team-textBox.main p {top: 85%;}
-  /* 오류 */
+  .team-textBox img {width: 300px; height: 300px; position: relative; top: -50px;}
+  .down-arrow {width: 100px; height: 100px; bottom: -45%;}
+  .team-con01 .team-textBox.main p {top: 70%;}
+  .github-ic-orange, .new-ic-orange, .figma-ic {width: 30px; height: 30px;}
   .footer-left-box {display: none;}
   .team-gallery {padding: 0;}
   .team-gallery .team-inner {display: flex; flex-direction: column;}
   .team-gallery .team-inner .team-textBox {width: 100%;}
-  .team-gallery .team-inner {padding: 0 40px;}
+  .team-gallery .team-inner {padding: 100px 20px;}
   .pc-textBox {display: none;}
   .mb-textBox {display: block;}
   .team-gallery .team-inner .team-imgBox {width: 100%; margin-top: 50px;}
   .sd-pf-st .title {font-size: 84px;}
   .sd-pf-st .workList {width: 85%;}
+  ..sd-pf-st .workList .textBox {transform: none;}
   .sd-pf-st .workList li {margin-top: 80px;}
   .sd-pf-st .workList li a .textBox h3 {font-size: 20px;}
   .info {font-size: 12px;}
