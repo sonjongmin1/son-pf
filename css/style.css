@@ -107,7 +107,7 @@ header .menuOpen {display: none; transition: 0.3s;}
 .skill-title { font-size: 64px; font-weight: bolder; margin-bottom: 80px; }
 .skill-title p:nth-child(1) {color: #ffa500; font-size: 32px; line-height: 20px; margin-top: 40px;}
 .skill-title p:nth-child(3) {color: rgba(28, 43, 60,0.35); font-size: 20px; line-height: 20px;}
-.skillBox {margin: auto; width: 900px; height: 800px; display: flex; flex-wrap: wrap; }
+.skillBox {margin: auto; width: 300px; height: 800px; display: flex; flex-wrap: wrap; }
 .card-container {perspective: 1000px; position: relative; width: 200px; height: 200px; margin-right: 100px; }
 .card {width: 100%; height: 100%; position: absolute; transform-style: preserve-3d; transition: transform 0.6s;}
 .card-container:hover .card { transform: rotateY(180deg); }  
@@ -467,7 +467,7 @@ header .menuOpen {display: none; transition: 0.3s;}
 /* z 이미지 섹션 */
 .z-con01 {position: relative; padding: 500px 0px 500px 0px; border-radius: 0 0 150px 150px; z-index: 2000;}
 .z-con01 .inner .mainTextBox h2 {color: #fff;}
-.z-con01 .inner .listBox {perspective: 900px;}
+.z-con01 .inner .listBox {position: relative; perspective: 900px; z-index: 1000;}
 .z-con01 .inner .listBox .box {width: 100%; height: 500px; margin-bottom: 30px; border-radius: 10px; padding: 30px 50px 0; position: -webkit-sticky; position: sticky; top: 100px; filter: brightness(1);  background-position: center; background-size: cover; background-repeat: no-repeat; box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;}     
 .z-con01 .inner .listBox .box.a {background-image: url(../images/z-scroll/img1.jpg);}
 .z-con01 .inner .listBox .box.b {background-image: url(../images/z-scroll/img2.jpg); background-position: 0% 5%;}
@@ -517,7 +517,7 @@ footer {z-index:0; position: absolute; width: 100%; bottom: 0; padding: 500px 0 
 
 /* 오류수정 */
 .sd-pf-st {padding-top: 10px;}
-
+.mb-textBox {display: none;}
 /* *********************************************************************************** */
 /* 반응형 */
 @media screen and (max-width: 1650px){
@@ -607,13 +607,142 @@ footer {z-index:0; position: absolute; width: 100%; bottom: 0; padding: 500px 0 
   .hobby ul li {width: 500px; height: 250px;}
   .hobby ul li > div {width: 350px;}
   .hobby ul li a .textBox .title {font-size: 48px;}
+  .hobby .counter {bottom: -10%;}
+  .z-con01 {padding: 300px 40px 300px 40px; margin-top: 100px;}
+  .z-con01 .inner .listBox .box {height: 350px;}
+
+  .one-path-me {height: auto;}
+  .text-wave {height: 0;}
+  .vision {font-size: 14px;}
+
 
   /* footer */
   .footer-left-box {width: 60%;}
   .footer-right-box {width: 40%; font-size: 20px;}
   .footer-menu {padding-bottom: 0;}
+  .footer-menu li a {font-size: 16px;}
 }
 
 @media (max-width: 768px) {
   /* 모바일 기술 */
+  header {padding: 30px;}
+  .gnb ul {display: none;}
+  .visual .mainText {font-size: 50px;}
+  .visual .mainText {margin: 0px 0px 150px 30px;}
+  .visual .circle {width: 150px; height: 150px; top: 55%; left: 30px; transform: translateY(-50%);}
+  .visual .subText {margin: 30px 0 30px 30px;}
+  .text-banner {padding: 0; margin-bottom: 30px;}
+  .text-banner {font-size: 24px;}
+  .simply-scroll .simply-scroll-clip .simply-scroll-list li {width: 60px;}
+  .text-banner ul li {margin: 5px 50px;}
+  .intro { height: 400px; font-size: 64px;}
+  .about .about-circle {width: 150px; height: 150px;}
+  .about .about-circle-wt {width: 170px; height: 170px;}
+  .about {height: 400px; padding: 20px;}
+  .about-content {font-size: 16px;}
+  .about-content.rg {font-size: 16px; right: 0%;}
+  .about-content.rt {font-size: 16px; width: auto;}
+  .about-content.lt {font-size: 16px;}
+  .about-content p {font-size: 10px;}
+  .about-content-line,.about-content-line-bt {width: 90.5%;}
+  .skill {height: 100vh;} 
+  .skill-title {font-size: 32px; margin-bottom: 40px;}
+  .skill-title p:nth-child(3) {font-size: 14px;}
+  .skillBox {width: 330px; border: 1px solid black; height: auto;}
+  .side {font-size: 14px; width: 100%; height: 100%;}
+  .side.front span {font-size: 12px;}
+  .percentage {font-size: 14px;}
+  .back p:nth-child(1) {font-size: 14px;}
+  .card-container {margin-right: 0; border: 1px solid black; width: 150px; height: 150px; margin-bottom: 10px; margin-left: 10px;}
+  .step {height: 300px;}
+  .step div:first-child {font-size: 40px;}
+  .step div:last-child {font-size: 20px;}
+  .step div:first-child {padding: 15px 50px;}
+  .pro {padding: 20px; height: 500px;}
+  .process-intro {height: 300px;}
+  .pro-title {height: 100px; border: 1px solid black;}
+  .pro-title span {font-size: 40px;}
+  .lt-about p:first-child {font-size: 24px;}
+  .lt-about p:last-child {font-size: 12px;}
+  .brain-img {width: 285px; height: 195px; top: 135px; left: 40px;}
+  .lt-about {left: 40px;  bottom: 20px;}
+  .info-img {width: 250px; height: 250px; top: 150px; left: 40px;}
+  .storyboard {height: 400px;}
+  .Idea-sketch.pro .pro-title span:nth-child(2), .storyboard.pro .pro-title span:nth-child(2) {top: 30px; right: 20px;}
+  .text-banner ul li img {width: 100px; height: 100px;}
+  .draw {top: 25%;}
+  .rg-about {right: 40px;}
+  .rg-about p:first-child {font-size: 20px;}
+  .rg-about p:not(:first-child) {font-size: 12px;}
+  .cloneWrap {padding: 40px;}
+  .yScroll-title p:nth-child(1) {font-size: 40px;}
+  .cloneWrap {height: 500px;}
+  .cloneWrap .conBox li.left {width: 100%;}
+  .cloneWrap .conBox li.right {width: 100%;}
+  .cloneWrap .conBox li.left a {width: 100%; height: 200px;}
+  .cloneWrap .conBox li.right .tit,.cloneWrap .conBox li.right .txtBox .eng, .cloneWrap .conBox li.right .txtBox .kor {margin: 10px 0;}
+  .cloneWrap .conBox li.right .tit span {font-size: 24px;}
+  .cloneWrap .conBox li.right .txtBox .eng {font-size: 10px;}
+  .cloneWrap .conBox li.right .txtBox .kor {font-size: 10px;}
+  .cloneWrap .conBox {padding: 0; flex-direction: column;}
+  .cloneWrap .conBox li.left a p.img {padding: 20px;}
+  .imgBox {overflow: visible;}
+  .step5 {margin-top: 550px;}
+  .step.step5 div:first-child {font-size: 40px; padding: 10px 50px;}
+  .step.step5 div:last-child {font-size: 20px;}
+  .infoProject .inner .textBox {width: 100%; font-size: 12px;}
+  .infoProject .inner .textBox .text {margin-bottom: 10px;}
+  .scroll-container {position: relative; margin-bottom: 20px; height: 200px; overflow: hidden;}
+  .infoProject {padding: 0;}
+  .infoProject .inner .textBox span.title {font-size: 16px;}
+  .infoProject .inner .imgBox {width: 100%; }
+  .github-ic-white, .new-ic {width: 30px; height: 30px;}
+  .team-con01 .team-textBox, .team-title {font-size: 24px;}
+  .team-textBox img {width: 300px; height: 300px;}
+  .down-arrow {width: 100px; height: 100px; bottom: -60%;}
+  .team-con01 .team-textBox.main p {top: 85%;}
+  /* 오류 */
+  .footer-left-box {display: none;}
+  .team-gallery {padding: 0;}
+  .team-gallery .team-inner {display: flex; flex-direction: column;}
+  .team-gallery .team-inner .team-textBox {width: 100%;}
+  .team-gallery .team-inner {padding: 0 40px;}
+  .pc-textBox {display: none;}
+  .mb-textBox {display: block;}
+  .team-gallery .team-inner .team-imgBox {width: 100%; margin-top: 50px;}
+  .sd-pf-st .title {font-size: 84px;}
+  .sd-pf-st .workList {width: 85%;}
+  .sd-pf-st .workList li {margin-top: 80px;}
+  .sd-pf-st .workList li a .textBox h3 {font-size: 20px;}
+  .info {font-size: 12px;}
+  .sd-pf-st-hobby .title {font-size: 84px;}
+  .sd-pf-st-hobby .title .c {font-size: 10px;}
+  .sd-pf-st-hobby {height: 500px;}
+  .hobby-con p:first-child {font-size: 50px;}
+  .hobby-con p:last-child {font-size: 12px;}
+  .hobby ul li {border: 1px solid black;  width: 270px; height: 320px;}
+  .hobby ul {border: 1px solid black;}
+  .z-con01 {padding: 300px 0 50px 0;}
+  .z-con01 .inner .listBox .box {height: 200px;}
+  .one-path-me {top: -90px; height: 100px;}
+
+  .text-wave {border: 1px solid #fff;}
+    /* footer */
+  .vision {font-size: 12px; border: 1px solid #fff;}
+  .footer-menu li a {font-size: 10px;}
+
+  @keyframes scrollUpDown {
+  0% {
+    transform: translateY(0); /* 시작 위치 */
+  }
+  100% {
+    transform: translateY(calc(-100% + 200px)); /* mockup 높이 제외한 만큼 위로 이동 */
+  }
 }
+.mb-br{display: block;}
+}
+  
+  
+
+
+
