@@ -21,10 +21,10 @@ if (window.matchMedia('(max-width: 768px)').matches) {
     gsap.to('.z-con01', {
       scrollTrigger: {
         trigger: '.text-wave',
-        start: '100% 100%',
+        start: '120% 100%',
         end: '100% 50%',
         scrub: 1,
-        // markers: true,
+        markers: true,
       },
       y: -160,
       duration: 5,
