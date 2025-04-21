@@ -24,7 +24,7 @@ if (window.matchMedia('(max-width: 768px)').matches) {
         start: '120% 100%',
         end: '100% 50%',
         scrub: 1,
-        markers: true,
+        // markers: true,
       },
       y: -160,
       duration: 5,

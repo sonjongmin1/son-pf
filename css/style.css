@@ -20,7 +20,7 @@ img {vertical-align: middle;}
 .bd {font-weight: bolder;} 
 .bt {margin-bottom: 10px;}
 /* layout */
-body {position: relative; font-family: "Noto Sans", sans-serif; font-size: 16px; line-height: 1.6; box-sizing: border-box; overflow-x: hidden;}
+body {position: relative; font-family: "Noto Sans", sans-serif; font-size: 16px; line-height: 1.6; box-sizing: border-box; overflow-x: hidden; }
 .wrap {position: relative; margin: 0 auto; overflow: hidden; color: rgb(28, 43, 60); border-radius: 0 0 200px 200px;} 
 
 
@@ -28,10 +28,18 @@ body {position: relative; font-family: "Noto Sans", sans-serif; font-size: 16px;
 header {width: 100%; position: fixed; left: 0; top: 0; background: rgb(28, 43, 60); z-index: 100; padding: 30px 60px; box-sizing: border-box; display: flex; justify-content: space-between; z-index: 9999;}
 header.active {transform: translateY(-100%); }
 header .logo{color:#fff;}
-header .menuOpen {display: none; transition: 0.3s;}
-.gnb ul {display: flex; justify-content: space-between; }
+.gnb ul {display: flex; justify-content: space-between;}
 .gnb ul li {margin-left: 70px;}
 .gnb ul li a {display: block;}
+.menu-wrap {display: none; position: fixed; width: 28px; height: 16px; cursor: pointer;}
+.menu-wrap .line {position: absolute; width: 100%; height: 2px; border-radius: 1px; background: #fff; left: 0;}
+.menu-wrap .line:first-child {top: 0; transform-origin: 25% 50%; transition: 0.3s;}
+.menu-wrap .line:nth-child(2) {top: calc(50% - 1px);}
+.menu-wrap .line:last-child {bottom: 0; transform-origin: 25% 50%; transition: 0.3s;}
+.menu-wrap.open .line:first-child {transform: rotate(45deg) translateX(10%);}
+.menu-wrap.open .line:nth-child(2) {opacity: 0;}
+.menu-wrap.open .line:last-child {transform: rotate(-45deg) translateX(10%);}
+
 
 /* gnb 호버효과 */
 .gnb ul li a .char {display: inline-block; position: relative; color: transparent; overflow: hidden;}
@@ -626,7 +634,9 @@ footer {z-index:0; position: absolute; width: 100%; bottom: 0; padding: 500px 0 
 @media (max-width: 768px) {
   /* 모바일 기술 */
   header {padding: 30px;}
-  .gnb ul {display: none;}
+  .gnb { width: 100vw; height: 100vh; position: absolute; background-color: #1c2b3c; margin: -30px; display: none; justify-content: center; align-items: center;}
+  .gnb ul {display: flex; flex-direction:column; align-items: center; height: 50vh; }
+  .gnb ul li {margin: 0; font-size: 24px; width: 100%; height: 100%; text-align: center;}
   .visual .mainText {font-size: 50px;}
   .visual .mainText {margin: 0px 0px 150px 30px;}
   .visual .circle {width: 150px; height: 150px; top: 55%; left: 30px; transform: translateY(-50%);}
@@ -756,6 +766,7 @@ footer {z-index:0; position: absolute; width: 100%; bottom: 0; padding: 500px 0 
   }
 }
 .mb-br{display: block;}
+.menu-wrap {position: absolute; top: 50%; right: 30px; transform: translateY(-50%); display: flex;}
 }
   
   
