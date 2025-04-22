@@ -15,10 +15,12 @@ menu.addEventListener('click', function () {
   }
 });
 
-menuClick.forEach((item, index) => {
-  item.addEventListener('click', function () {
-    gnb.style.display = 'none';
-    body.style.overflow = 'visible';
-    menu.classList.remove('open');
+if (window.matchMedia('(max-width: 768px)').matches) {
+  menuClick.forEach((item, index) => {
+    item.addEventListener('click', function () {
+      gnb.style.display = 'none';
+      body.style.overflow = 'visible';
+      menu.classList.remove('open');
+    });
   });
-});
+}
