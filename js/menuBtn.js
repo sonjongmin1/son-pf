@@ -27,6 +27,7 @@ menu.addEventListener('click', toggleMenu);
 // 초기 설정 및 브라우저 크기 변화 감지
 function setupMenuBehavior() {
   if (window.matchMedia('(max-width: 768px)').matches) {
+    gnb.style.display = 'none';
     // 모바일 환경일 때만 메뉴 클릭 이벤트 추가
     menuClick.forEach((item) => {
       item.addEventListener('click', closeMenu);
