@@ -547,6 +547,7 @@ footer {z-index:0; position: absolute; width: 100%; bottom: 0; padding: 500px 0 
   .card-container {margin:  0 45px;}
   .infoProject .inner .imgBox {width: 65%;}
   .infoProject .inner .textBox {width: 30%;}
+  .sd-pf-st .textBox {transform: none !important;}
 }
 
 
@@ -613,6 +614,7 @@ footer {z-index:0; position: absolute; width: 100%; bottom: 0; padding: 500px 0 
   .team-gallery .team-inner .team-imgBox {width: 100%; margin-top: 50px; height: 290px;}
   .team-gallery .team-inner .team-imgBox li {width: 50%;}
   .gallery-ic {margin-top: 20px;}
+  .sd-pf-st .textBox {transform: none !important;}
   .sd-pf-st .title {font-size: 140px;}
   .sd-pf-st {padding-top: 10px;}
   .sd-pf-st .workList li a .textBox h3 {font-size: 24px;}
@@ -737,9 +739,10 @@ footer {z-index:0; position: absolute; width: 100%; bottom: 0; padding: 500px 0 
   .team-gallery .team-inner .team-imgBox {width: 100%; margin-top: 50px;}
   .sd-pf-st .title {font-size: 84px;}
   .sd-pf-st .workList {width: 85%;}
-  .sd-pf-st .workList .textBox {transform: none;}
+  .sd-pf-st .textBox {transform: none !important;}
   .sd-pf-st .workList li {margin-top: 80px;}
   .sd-pf-st .workList li a .textBox h3 {font-size: 20px;}
+  .sd-pf-st .workList li:nth-child(2n) {margin-bottom: 10px;}
   .info {font-size: 12px;}
   .sd-pf-st-hobby .title {font-size: 84px;}
   .sd-pf-st-hobby .title .c {font-size: 10px;}
